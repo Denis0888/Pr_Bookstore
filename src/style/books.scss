@@ -1,0 +1,265 @@
+@import "fonts";
+@import "mixin";
+
+.books {
+   width: 1440px;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   margin-top: 140px;
+
+
+   .category-books {
+      position: relative;
+      width: 416px;
+      height: 710px;
+      background-color: rgba(239, 238, 246, 1);
+
+      .category-books_list {
+         display: flex;
+         flex-direction: column;
+         position: absolute;
+         top: 60px;
+         left: 150px;
+
+         .category-books_item {
+            margin-top: 22px;
+            @include style-text(500, 12px, 14px);
+            list-style: none;
+            cursor: pointer;
+         }
+
+         .category-books_item.active {
+            position: relative;
+            left: -22px;
+            list-style: inside;
+            @include style-text(700, 16px, 20px);
+         }
+      }
+   }
+
+   .case-books {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      left: -40px;
+      width: 900px;
+
+      .book-position {
+         display: flex;
+         width: 450px;
+         height: 368px;
+
+         .book-position_image {
+            margin-top: 40px;
+            width: 212px;
+            height: 310px;
+            box-shadow: 5px 15px 5px rgba(0, 0, 0, .3);
+         }
+
+         .book-position_image-none {
+            margin-top: 40px;
+            width: 212px;
+            height: 310px;
+            font-size: 0;
+            background-size: cover;
+            box-shadow: 5px 15px 5px rgba(0, 0, 0, .3);
+            background-image: url("../images/place-holder.png");
+         }
+
+         .book-position_info {
+            position: relative;
+            margin-top: 40px;
+            width: 212px;
+            height: 310px;
+
+            .book-position_info-author {
+               @include opensans-normal;
+               font-weight: 400;
+               padding: 40px 0px 0px 25px;
+               font-size: 10px;
+               line-height: 14px;
+               text-transform: capitalize;
+               color: #5C6A79;
+            }
+
+            .book-position_info-title {
+               @include montserrat-bold;
+               width: 176px;
+               max-height: 62px;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               padding: 4px 0px 0px 25px;
+               font-weight: 700;
+               font-size: 16px;
+               line-height: 20px;
+               color: #1C2A39;
+            }
+
+            .rating-block-none {
+               display: none;
+            }
+
+            .rating-block {
+               display: flex;
+               align-items: center;
+               margin: 4px 0px 0px 25px;
+               width: 176px;
+               height: 15px;
+
+               .rating-block_stars {
+                  @include rating-block-size;
+                  font-weight: 400;
+                  font-size: 10px;
+                  line-height: 14px;
+                  color: #5C6A79;
+
+                  .rating-block_stars__one {
+                     display: flex;
+                     @include rating-block-size;
+
+                     .rating-block_stars__yellow {
+                        @include stars-yellow;
+                     }
+
+                     .rating-block_stars__grey {
+                        @include stars-grey;
+                     }
+                  }
+
+                  .rating-block_stars__two {
+                     display: flex;
+                     @include rating-block-size;
+
+                     .rating-block_stars__yellow {
+                        @include stars-yellow;
+                     }
+
+                     .rating-block_stars__grey {
+                        @include stars-grey;
+                     }
+                  }
+
+                  .rating-block_stars__three {
+                     display: flex;
+                     @include rating-block-size;
+
+                     .rating-block_stars__yellow {
+                        @include stars-yellow;
+                     }
+
+                     .rating-block_stars__grey {
+                        @include stars-grey;
+                     }
+                  }
+
+                  .rating-block_stars__four {
+                     display: flex;
+                     @include rating-block-size;
+
+                     .rating-block_stars__yellow {
+                        @include stars-yellow;
+                     }
+
+                     .rating-block_stars__grey {
+                        @include stars-grey;
+                     }
+                  }
+
+                  .rating-block_stars__five {
+                     display: flex;
+                     @include rating-block-size;
+
+                     .rating-block_stars__yellow {
+                        @include stars-yellow;
+                     }
+
+                     .rating-block_stars__grey {
+                        @include stars-grey;
+                     }
+                  }
+               }
+
+               .rating-block-stars-none {
+                  display: none;
+               }
+
+               .rating-block_count {
+                  @include opensans-normal;
+                  margin-left: 6px;
+                  width: 100px;
+                  height: 15px;
+                  font-weight: 400;
+                  font-size: 10px;
+                  line-height: 14px;
+                  color: #5C6A79;
+               }
+
+               .rating-block_count-none {
+                  display: none;
+               }
+            }
+
+            .book-position_info-description {
+               @include opensans-normal;
+               width: 176px;
+               height: 42px;
+               margin: 17px 0px 0px 25px;
+               font-weight: 400;
+               font-size: 10px;
+               line-height: 14px;
+               overflow: hidden;
+               display: -webkit-box;
+               -webkit-line-clamp: 3;
+               -webkit-box-orient: vertical;
+               color: #5C6A79;
+            }
+
+            .book-position_info-description-none {
+               display: none;
+            }
+
+            .book-position_info-sale {
+               @include montserrat-bold;
+               position: absolute;
+               bottom: 90px;
+               width: 170px;
+               height: 18px;
+               margin: 16px 0px 0px 25px;
+               font-weight: 700;
+               font-size: 13px;
+               line-height: 16px;
+               text-transform: uppercase;
+               color: #1C2A39;
+            }
+
+            .book-position_info-sale-none {
+               display: none;
+            }
+
+            .btn_buy-now {
+               @include button;
+               position: absolute;
+               bottom: 30px;
+               margin: 16px 0px 0px 25px;
+            }
+
+            .btn_in_the_cart {
+               @include button-in-the-cart;
+               position: absolute;
+               bottom: 30px;
+               margin: 16px 0px 0px 25px;
+            }
+         }
+      }
+   }
+}
+
+.btn_load-more {
+   display: block;
+   position: relative;
+   top: 40px;
+   margin: auto;
+   margin-bottom: 100px;
+   @include button;
+}

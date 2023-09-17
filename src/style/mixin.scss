@@ -1,0 +1,53 @@
+@mixin style-text($weight, $size, $height) {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: $weight;
+   font-size: $size;
+   line-height: $height;
+}
+
+@mixin button {
+   background-color: white;
+   width: 176px;
+   height: 45px;
+   border: 1px solid #4C3DB2;
+   color:  #4C3DB2;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+@mixin button-in-the-cart {
+   background-color: whitesmoke;
+   width: 176px;
+   height: 45px;
+   border: 1px solid  #5C6A79;
+   color:  #5C6A79;
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+@mixin opensans-normal {
+   font-family: 'OpenSans';
+   font-style: normal;
+}
+
+@mixin montserrat-bold {
+   font-family: 'Montserrat-B';
+   font-style: bold;
+}
+
+@mixin rating-block-size {
+   width: 65px;
+   height: 15px;
+}
+
+@mixin stars-yellow {
+   width: 12PX;
+   height: 12PX;
+   background-image: url("../icon/star_grey.svg");
+}
+
+@mixin stars-grey {
+   width: 12PX;
+   height: 12PX;
+   background-image: url("../icon/star_yellow.svg");
+}
